@@ -11,10 +11,11 @@ public class Main {
         TrackerService tracker = new TrackerService();
 
         while (true) {
-            System.out.println("\n1. Add Session");
+            System.out.println("1. Add Session");
             System.out.println("2. Show Sessions");
             System.out.println("3. Total Time");
-            System.out.println("4. Exit");
+            System.out.println("4. Subject-wise Time");
+            System.out.println("5. Exit");
 
             int choice = sc.nextInt();
 
@@ -41,9 +42,18 @@ public class Main {
                 System.out.println("Total: " + tracker.getTotalStudyTime());
             }
 
-            else {
-                break;
-            }
+            else if (choice == 4) {
+    tracker.showSubjectWiseTime();
+}
+
+else if (choice == 5) {
+    System.out.println("Exiting...");
+    break;
+}
+
+else {
+    System.out.println("Invalid choice!");
+}
         }
     }
 }

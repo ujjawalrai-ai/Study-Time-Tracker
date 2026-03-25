@@ -2,6 +2,7 @@ package service;
 
 import model.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class TrackerService {
 
@@ -25,6 +26,24 @@ public void showAllSessions() {
         System.out.println(
             s.getSubject().getName() + " - " + s.getDuration() + " minutes"
         );
+    }
+}
+public void showSubjectWiseTime() {
+    HashMap<String, Integer> map = new HashMap<>();
+
+    for (StudySession s : sessions) {
+        String subject = s.getSubject().getName();
+        int time = s.getDuration();
+
+        if (map.containsKey(subject)) {
+            map.put(subject, map.get(subject) + time);
+        } else {
+            map.put(subject, time);
+        }
+    }
+
+    for (String sub : map.keySet()) {
+        System.out.println(sub + " -> " + map.get(sub) + " minutes");
     }
 }
 }
