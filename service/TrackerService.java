@@ -5,9 +5,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class TrackerService {
-
+    private int dailyGoal;
     private ArrayList<StudySession> sessions = new ArrayList<>();
-
+    public void setDailyGoal(int goal) {
+    this.dailyGoal = goal;
+    System.out.println("Daily goal set successfully!");
+}
     public void addSession(StudySession session) {
         sessions.add(session);
     }
@@ -45,6 +48,15 @@ public void showSubjectWiseTime() {
 
     for (String sub : map.keySet()) {
         System.out.println(sub + " -> " + map.get(sub) + " minutes");
+    }
+}
+public void checkGoal() {
+    int total = getTotalStudyTime();
+
+    if (total >= dailyGoal) {
+        System.out.println("🎉 Goal achieved!");
+    } else {
+        System.out.println("You need " + (dailyGoal - total) + " more minutes.");
     }
 }
 }

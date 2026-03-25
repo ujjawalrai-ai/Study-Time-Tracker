@@ -29,7 +29,11 @@ public class Main {
                 int time = sc.nextInt();
 
                 Subject sub = new Subject(name);
-                StudySession session = new StudySession(sub, time);
+                System.out.print("Enter date (YYYY-MM-DD): ");
+                sc.nextLine(); // clear buffer
+                String date = sc.nextLine();
+
+                StudySession session = new StudySession(sub, time, date);
 
                 tracker.addSession(session);
             }
@@ -47,8 +51,13 @@ public class Main {
 }
 
 else if (choice == 5) {
-    System.out.println("Exiting...");
-    break;
+    System.out.print("Enter daily goal (minutes): ");
+    int goal = sc.nextInt();
+    tracker.setDailyGoal(goal);
+}
+
+else if (choice == 6) {
+    tracker.checkGoal();
 }
 
 else {
