@@ -19,4 +19,11 @@ public class TrackerService {
 
     return total;
 }
+public void showAllSessions() {
+    for (StudySession s : sessions) {
+        System.out.println(
+            s.getSubject().getName() + " - " + s.getDuration() + " minutes"
+        );
+    }
+}
 }
