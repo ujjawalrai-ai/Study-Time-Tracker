@@ -15,7 +15,9 @@ public class Main {
             System.out.println("2. Show Sessions");
             System.out.println("3. Total Time");
             System.out.println("4. Subject-wise Time");
-            System.out.println("5. Exit");
+            System.out.println("5. Set Daily Goal");
+            System.out.println("6. Check Goal");
+            System.out.println("7. Exit");
 
             int choice = sc.nextInt();
 
@@ -50,18 +52,18 @@ public class Main {
     tracker.showSubjectWiseTime();
 }
 
-else if (choice == 5) {
-    System.out.print("Enter daily goal (minutes): ");
-    int goal = sc.nextInt();
-    tracker.setDailyGoal(goal);
-}
+        else if (choice == 5) {
+            System.out.print("Enter daily goal (minutes): ");
+            int goal = sc.nextInt();
+            tracker.setDailyGoal(goal);
+        }
 
-else if (choice == 6) {
-    tracker.checkGoal();
-}
+        else if (choice == 6) {
+            tracker.checkGoal();
+        }
 
-else {
-    System.out.println("Invalid choice!");
+        else if (choice == 7) {
+    break;
 }
         }
     }
