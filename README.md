@@ -2,67 +2,63 @@
 
 ## 🚀 Overview
 
-The **Study Time Tracker** is a Java-based console application that helps users track their daily study sessions.
-It allows users to log study time, view sessions, analyze subject-wise performance, and set daily goals.
-
-This project is built using **Object-Oriented Programming (OOP)** concepts such as classes, objects, encapsulation, and modular design.
+The Study Time Tracker is a console-based Java application that helps users track their daily study sessions. It allows users to log study time, view sessions, analyze subject-wise performance, and set daily study goals.
 
 ---
 
 ## 🎯 Features
 
-* ✅ Add study sessions (subject, duration, date)
-* ✅ View all study sessions
-* ✅ Calculate total study time
-* ✅ Subject-wise time tracking
-* ✅ Set daily study goal
-* ✅ Check goal completion status
+* Add study sessions (subject, duration, date)
+* View all sessions
+* Calculate total study time
+* Subject-wise time tracking
+* Set and check daily study goals
 
 ---
 
-## 🏗️ Project Structure
+## 🛠️ Prerequisites
 
-StudyTracker/
-│
-├── model/
-│   ├── Subject.java
-│   ├── StudySession.java
-│
-├── service/
-│   ├── TrackerService.java
-│
-├── main/
-│   ├── Main.java
+Make sure you have:
 
----
+* Java JDK (version 8 or above)
+* Any code editor (VS Code / IntelliJ)
 
-## 🧠 Concepts Used
+To check Java installation:
 
-* Object-Oriented Programming (OOP)
-* Encapsulation
-* Classes & Objects
-* ArrayList (Dynamic Data Storage)
-* HashMap (Subject-wise tracking)
-* User Input Handling (Scanner)
+```bash
+java -version
+```
 
 ---
 
 ## ⚙️ How to Run the Project
 
-### 1️⃣ Clone the Repository
+### 1. Clone the Repository
 
 ```bash
 git clone <your-repo-link>
 cd StudyTracker
 ```
 
-### 2️⃣ Compile the Code
+---
+
+### 2. Compile the Code
+
+👉 For Windows (PowerShell):
 
 ```bash
 javac model/*.java service/*.java main/*.java
 ```
 
-### 3️⃣ Run the Program
+👉 For Command Prompt:
+
+```bash
+javac model\Subject.java model\StudySession.java service\TrackerService.java main\Main.java
+```
+
+---
+
+### 3. Run the Application
 
 ```bash
 java main.Main
@@ -70,7 +66,9 @@ java main.Main
 
 ---
 
-## 🖥️ Sample Output
+## 🧪 How to Use
+
+When you run the program, you will see:
 
 ```
 1. Add Session
@@ -82,38 +80,65 @@ java main.Main
 7. Exit
 ```
 
+### Example:
+
+1. Choose `1` → Add Session
+
+2. Enter:
+
+   * Subject: Math
+   * Duration: 60
+   * Date: 2026-03-25
+
+3. Choose `3` → View total time
+
+4. Choose `4` → View subject-wise time
+
+5. Choose `5` → Set goal (e.g., 120 minutes)
+
+6. Choose `6` → Check goal
+
 ---
 
-## 🧪 Example Usage
+## 📂 Project Structure
 
-* Add a session:
+```
+StudyTracker/
+├── model/
+│   ├── Subject.java
+│   ├── StudySession.java
+├── service/
+│   ├── TrackerService.java
+├── main/
+│   ├── Main.java
+```
 
-  * Subject: Math
-  * Duration: 60 minutes
-  * Date: 2026-03-25
+---
 
-* View total study time
+## 🧠 Concepts Used
 
-* Track time per subject
-
-* Set daily goal and monitor progress
+* Object-Oriented Programming (OOP)
+* Encapsulation
+* ArrayList
+* HashMap
+* Java Packages
 
 ---
 
 ## 🚧 Future Improvements
 
-* 💾 Save data to file (data persistence)
-* 📅 Filter sessions by date
-* 📊 Graphical representation of study data
-* 🌐 GUI version (JavaFX / Swing)
+* Save data to file
+* GUI interface
+* Data visualization
 
 ---
 
 ## 👨‍💻 Author
 
-* Ujjawal Rai
+Ujjawal Rai
 
 ---
+
 
 
 
