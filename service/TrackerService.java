@@ -50,6 +50,7 @@ public void showSubjectWiseTime() {
         System.out.println(sub + " -> " + map.get(sub) + " minutes");
     }
 }
+//Implemented daily study goal feature with tracking and feedback
 public void checkGoal() {
     int total = getTotalStudyTime();
 
