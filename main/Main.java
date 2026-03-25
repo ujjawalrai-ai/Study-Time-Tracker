@@ -11,26 +11,24 @@ public class Main {
         TrackerService tracker = new TrackerService();
 
         while (true) {
-            System.out.println("\n--- Study Tracker ---");
-            System.out.println("1. Add Study Session");
-            System.out.println("2. View All Sessions");
-            System.out.println("3. Total Study Time");
+            System.out.println("\n1. Add Session");
+            System.out.println("2. Show Sessions");
+            System.out.println("3. Total Time");
             System.out.println("4. Exit");
 
-            System.out.print("Enter your choice: ");
             int choice = sc.nextInt();
 
             if (choice == 1) {
-                sc.nextLine(); // clear buffer
+                sc.nextLine();
 
                 System.out.print("Enter subject: ");
                 String name = sc.nextLine();
 
-                System.out.print("Enter duration (minutes): ");
+                System.out.print("Enter time: ");
                 int time = sc.nextInt();
 
-                Subject subject = new Subject(name);
-                StudySession session = new StudySession(subject, time);
+                Subject sub = new Subject(name);
+                StudySession session = new StudySession(sub, time);
 
                 tracker.addSession(session);
             }
@@ -40,18 +38,12 @@ public class Main {
             }
 
             else if (choice == 3) {
-                System.out.println("Total Study Time: " + tracker.getTotalStudyTime() + " minutes");
+                System.out.println("Total: " + tracker.getTotalStudyTime());
             }
-
-            else if (choice == 4) {
-    tracker.showSubjectWiseTime();
-}
 
             else {
-                System.out.println("Exit!");
+                break;
             }
         }
-
-        sc.close();
     }
 }
