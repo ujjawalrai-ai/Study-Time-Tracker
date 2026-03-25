@@ -19,6 +19,7 @@ public class TrackerService {
 
     return total;
 }
+// Added functionality to display all study sessions
 public void showAllSessions() {
     for (StudySession s : sessions) {
         System.out.println(
